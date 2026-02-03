@@ -2,7 +2,5 @@ node_modules/
 dist/
 .opencode/
 .shadow-cljs/
-.clj-kondo/
-.lsp/
-.cpcache/
+.clj-kondo/.cache/
 .DS_Store
