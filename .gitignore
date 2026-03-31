@@ -1,5 +1,14 @@
-node_modules/
+# Editor/IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Build outputs
 dist/
-.opencode/
-.shadow-cljs/
-.DS_Store
+node_modules/
+
+# Cache
+.clj-kondo/
+.nrepl-port
