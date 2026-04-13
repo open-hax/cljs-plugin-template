@@ -7,8 +7,6 @@
 
 # Build outputs
 dist/
-node_modules/
-
-# Cache
-.clj-kondo/
-.nrepl-port
+.opencode/
+.shadow-cljs/
+.DS_Store
