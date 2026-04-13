@@ -1,11 +1,4 @@
-# Editor/IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-
-# Build outputs
+node_modules/
 dist/
 .opencode/
 .shadow-cljs/
