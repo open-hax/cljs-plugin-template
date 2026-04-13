@@ -1,19 +1,10 @@
 {
-  "name": "@openhax/cljs-plugin-template",
-  "private": true,
-  "type": "module",
+  "name": "cljs-plugin-template",
+  "version": "0.0.1",
   "scripts": {
-    "watch": "shadow-cljs watch opencode",
-    "build": "shadow-cljs release opencode",
-    "plugin:copy": "mkdir -p .opencode/plugins && cp dist/plugin.js .opencode/plugins/my-plugin.js",
-    "plugin:link": "mkdir -p .opencode/plugins && ln -sf $(pwd)/dist/plugin.js .opencode/plugins/my-plugin.js",
-    "create": "node scripts/create-plugin.mjs"
-  },
-  "dependencies": {
-    "@opencode-ai/plugin": "^0.0.0",
-    "zod": "^3.25.0"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "shadow-cljs": "^2.28.20"
+    "typescript": "^5.0.0"
   }
 }
