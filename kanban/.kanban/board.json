@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-05-29T04:01:15.189Z",
+  "totalTasks": 2,
+  "columns": [
+    {
+      "status": "icebox",
+      "title": "Icebox",
+      "taskCount": 0,
+      "tasks": []
+    },
+    {
+      "status": "incoming",
+      "title": "Incoming",
+      "taskCount": 2,
+      "tasks": [
+        {
+          "uuid": "orgs-open-hax-archived-cljs-plugin-template-kanban-orgs-open-hax-archived-cljs-plugin-template-spec-dev-loop-md",
+          "title": "Dev loop improvement plan",
+          "slug": "dev-loop-improvement-plan",
+          "status": "incoming",
+          "priority": "P3",
+          "labels": [
+            "specs",
+            "migrated-spec"
+          ],
+          "createdAt": "2026-05-29T04:01:14.187Z",
+          "content": "> Source: `orgs/open-hax/archived/cljs-plugin-template/spec/dev-loop.md`\n> Migrated-to-kanban: `orgs/open-hax/archived/cljs-plugin-template/kanban/dev-loop.md`\n\n# Dev loop improvement plan\n\n## Requirements\n- add a pm2 ecosystem config and helper script so `opencode serve` can be managed via PM2, keyed to a documented port `OPENCODE_DEV_PORT` (default 4096) and `OPENCODE_DEV_HOSTNAME`, and restart whenever `dist/plugin.js` changes\n- expose the built plugin through `.opencode/plugins/index.js` (re-export `MyPlugin` from `dist/plugin.js`) and allow that path to be tracked despite the existing `.opencode/` entry in `.gitignore`\n- document the new flow and environment variables in both `README.md` and `template/README.md` so template consumers understand how to run the PM2-backed dev loop\n\n## Code files referenced\n- `README.md:29-49` outlines the current manual copy-based dev loop that will be replaced\n- `template/README.md:29-48` mirrors that section for generated plugins\n- `package.json:6-10` defines the `watch`, `build`, and plugin copy/link scripts that back the workflow\n\n## Existing issues\n- none\n\n## Existing PRs\n- none\n\n## Definition of done\n- `pm2/ecosystem.config.mjs` plus `scripts/start-opencode-server.mjs` run `opencode serve` with the configured hostname/port, watch `dist/plugin.js`, and gracefully forward signals\n- `.gitignore` selectively un-ignores `.opencode/plugins/` so the re-export index can be tracked, and `.opencode/plugins/index.js` simply re-exports `MyPlugin` from `dist/plugin.js`\n- README files describe how to build, run, and configure the new PM2 dev loop plus the rerouting of `.opencode/plugins/index.js`",
+          "sourcePath": "/home/err/devel/orgs/open-hax/archived/cljs-plugin-template/kanban/dev-loop.md"
+        },
+        {
+          "uuid": "orgs-open-hax-archived-cljs-plugin-template-kanban-orgs-open-hax-archived-cljs-plugin-template-spec-smoke-test-md",
+          "title": "Smoke test integration plan",
+          "slug": "smoke-test-integration-plan",
+          "status": "incoming",
+          "priority": "P3",
+          "labels": [
+            "specs",
+            "migrated-spec"
+          ],
+          "createdAt": "2026-05-29T04:01:14.186Z",
+          "content": "> Source: `orgs/open-hax/archived/cljs-plugin-template/spec/smoke-test.md`\n> Migrated-to-kanban: `orgs/open-hax/archived/cljs-plugin-template/kanban/smoke-test.md`\n\n# Smoke test integration plan\n\n## Requirements\n- provide a minimal OpenCode plugin tool that the smoke test can trigger; it must live in `.opencode/plugins/` so the CLI loads it automatically.\n- add infrastructure (`package.json`, `.gitignore`) describing how to install/develop the plugin and smoke test runner.\n- create `scripts/smoke-test.mjs` that launches `opencode run` with `--format json`, supplies a deterministic prompt asking for the custom tool, and watches the resulting JSON stream for the `tool.execute.after` event to prove the tool was called.\n- document how to run the smoke test, what the custom tool returns, and what to expect from the JSON output.\n\n## Code files referenced\n- `.opencode/plugins/smoke-tool.js` – defines the tool (exports `smokeTool` via `@opencode-ai/plugin`).\n- `package.json` – lists dependencies (`@opencode-ai/plugin`) and a `test:smoke` script that kicks off the smoke test runner.\n- `scripts/smoke-test.mjs` – orchestrates `opencode run` and inspects its JSON stream.\n- `README.md` – describes the tool, how to run the smoke test, and how to interpret the JSON log.\n\n## Definition of done\n- The repo has a functioning custom tool plugin and the smoke-test script can parse `opencode run --format json` output, exiting non-zero when the expected tool event is missing.\n- Documentation explains the tool’s behavior, the expected JSON event, how to install dependencies, and how to run the smoke test.\n\n## Phases\n1. Add package metadata, dependencies, `.opencode/plugins/` directory, and `.gitignore` entries so the plugin and node code can live in the repo.\n2. Implement the custom `smokeTool` plugin via `@opencode-ai/plugin` and ensure it exports through `.opencode/plugins/`.\n3. Create `scripts/smoke-test.mjs` that spawns `opencode run`, watches the NDJSON stream for the `tool.execute.after` event, and fails if the tool never fires.\n4. Update `README.md` with usage instructions for the tool and smoke test.",
+          "sourcePath": "/home/err/devel/orgs/open-hax/archived/cljs-plugin-template/kanban/smoke-test.md"
+        }
+      ]
+    },
+    {
+      "status": "accepted",
+      "title": "Accepted",
+      "taskCount": 0,
+      "tasks": []
+    },
+    {
+      "status": "breakdown",
+      "title": "Breakdown",
+      "taskCount": 0,
+      "tasks": []
+    },
+    {
+      "status": "blocked",
+      "title": "Blocked",
+      "taskCount": 0,
+      "tasks": []
+    },
+    {
+      "status": "ready",
+      "title": "Ready",
+      "taskCount": 0,
+      "tasks": []
+    },
+    {
+      "status": "todo",
+      "title": "Todo",
+      "taskCount": 0,
+      "tasks": []
+    },
+    {
+      "status": "in_progress",
+      "title": "In Progress",
+      "taskCount": 0,
+      "tasks": []
+    },
+    {
+      "status": "review",
+      "title": "Review",
+      "taskCount": 0,
+      "tasks": []
+    },
+    {
+      "status": "document",
+      "title": "Document",
+      "taskCount": 0,
+      "tasks": []
+    },
+    {
+      "status": "done",
+      "title": "Done",
+      "taskCount": 0,
+      "tasks": []
+    },
+    {
+      "status": "rejected",
+      "title": "Rejected",
+      "taskCount": 0,
+      "tasks": []
+    }
+  ]
+}

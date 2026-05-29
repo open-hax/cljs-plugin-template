@@ -1,3 +1,17 @@
+---
+uuid: "orgs-open-hax-archived-cljs-plugin-template-kanban-orgs-open-hax-archived-cljs-plugin-template-spec-dev-loop-md"
+title: "Dev loop improvement plan"
+status: incoming
+priority: P3
+labels: ["specs", "migrated-spec"]
+created_at: "2026-05-29T04:01:14.187Z"
+source: "orgs/open-hax/archived/cljs-plugin-template/spec/dev-loop.md"
+category: "specs"
+---
+
+> Source: `orgs/open-hax/archived/cljs-plugin-template/spec/dev-loop.md`
+> Migrated-to-kanban: `orgs/open-hax/archived/cljs-plugin-template/kanban/dev-loop.md`
+
 # Dev loop improvement plan
 
 ## Requirements

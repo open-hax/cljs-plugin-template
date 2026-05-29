@@ -1,3 +1,17 @@
+---
+uuid: "orgs-open-hax-archived-cljs-plugin-template-kanban-orgs-open-hax-archived-cljs-plugin-template-spec-smoke-test-md"
+title: "Smoke test integration plan"
+status: incoming
+priority: P3
+labels: ["specs", "migrated-spec"]
+created_at: "2026-05-29T04:01:14.186Z"
+source: "orgs/open-hax/archived/cljs-plugin-template/spec/smoke-test.md"
+category: "specs"
+---
+
+> Source: `orgs/open-hax/archived/cljs-plugin-template/spec/smoke-test.md`
+> Migrated-to-kanban: `orgs/open-hax/archived/cljs-plugin-template/kanban/smoke-test.md`
+
 # Smoke test integration plan
 
 ## Requirements
