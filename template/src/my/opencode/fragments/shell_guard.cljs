@@ -6,7 +6,7 @@
    (js/RegExp. "dd\\s+if=" "i")
    (js/RegExp. "mkfs\\." "i")
    ;; classic fork bomb pattern
-   (js/RegExp. ":\\(\\)\\s*\\{\\s*:\\|:\\s*&\\s*\\}\\s*;:" "i")])
+   (js/RegExp. ":\\(\\)\\s*\\{\\s*:\\|:\\s*\u0026\\s*\\}\\s*;:" "i")])
 
 (defn ^:private dangerous? [cmd]
   (boolean (some #(.test % cmd) (danger-regexes))))
@@ -22,4 +22,4 @@
                            {:kind "danger-shell"
                             :tool "shell"
                             :detail cmd
-                            :message (str "Run dangerous shell command?\n" cmd)}))))))}})
+                            :message (str "Run dangerous shell command?\\n" cmd)})))))}})

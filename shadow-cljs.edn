@@ -9,4 +9,4 @@
    :output-dir "dist"
    :modules {:plugin {:entries [my.opencode.entry]}}
    :compiler-options
-   {:output-feature-set :es2022}}}}
+       {:output-feature-set :es-next}}}}

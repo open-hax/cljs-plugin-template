@@ -10,10 +10,10 @@
     "create": "node scripts/create-plugin.mjs"
   },
   "dependencies": {
-    "@opencode-ai/plugin": "^0.0.0",
+    "@opencode-ai/plugin": "^1.14.41",
     "zod": "^3.25.0"
   },
   "devDependencies": {
-    "shadow-cljs": "^2.28.20"
+    "shadow-cljs": "^3.4.11"
   }
 }

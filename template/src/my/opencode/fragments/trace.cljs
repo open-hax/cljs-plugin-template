@@ -15,7 +15,7 @@
                            :level "debug"
                            :message "tool.start"
                            :extra #js {:tool (.-tool input)
-                                       :id id}})))))
+                                        :id id}})))))
 
       "tool.execute.after"
       (fn [ctx input _output]
@@ -30,4 +30,4 @@
                            :message "tool.done"
                            :extra #js {:tool (.-tool input)
                                        :id id
-                                       :ms dt}}))))}}))
+                                        :ms dt}})))))}}))

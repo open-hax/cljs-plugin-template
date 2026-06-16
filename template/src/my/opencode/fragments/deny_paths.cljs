@@ -12,4 +12,4 @@
       (when (= "read" (.-tool input))
         (let [fp (aget (.-args output) "filePath")]
           (when (and fp (contains-any? fp substrings))
-            (throw (js/Error. (str "Denied reading file: " fp)))))))}}})
+            (throw (js/Error. (str "Denied reading file: " fp)))))))}})

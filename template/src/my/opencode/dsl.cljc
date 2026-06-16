@@ -1,7 +1,9 @@
-(ns my.opencode.dsl.macros)
+(ns my.opencode.dsl
+  #?(:cljs (:require [my.opencode.spec]
+                     [my.opencode.runtime])))
 
 (defmacro hook
-  "Add a raw hook by name (string or keyword). Handler signature: (fn [ctx &args])."
+  "Add a raw hook by name (string or keyword). Handler signature: (fn [ctx \u0026args])."
   [event handler]
   `{:hooks {~event ~handler}})
 
@@ -43,9 +45,9 @@
 
   (defplugin plugin*
     (init (fn [ctx] ...))
-    (hook "event" (fn [ctx payload] ...))
-    (before-tool "read" (fn [ctx in out] ...))
-    (tools {"hello" hello-tool}))
+    (hook \"event\" (fn [ctx payload] ...))
+    (before-tool \"read\" (fn [ctx in out] ...))
+    (tools {\"hello\" hello-tool}))
 
   Produces:
     - <name>-spec : merged spec map
