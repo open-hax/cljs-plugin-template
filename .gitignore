@@ -1,4 +1,3 @@
-# Editor/IDE
 .idea/
 .vscode/
 *.swp
@@ -12,3 +11,7 @@ node_modules/
 # Cache
 .clj-kondo/
 .nrepl-port
+.lsp/
+
+# Lockfiles (template consumers generate their own)
+pnpm-lock.yaml
